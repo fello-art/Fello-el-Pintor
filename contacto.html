@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contacto</title>
+<title>Contacto</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family:Arial;
-            background:linear-gradient(135deg,#1f4037,#99f2c8);
-            color:white;
-            text-align:center;
-        }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(135deg,#1f4037,#99f2c8);
+  color:white;
+  text-align:center;
+}
 
-        .menu{
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(0,0,0,0.7);
-            padding:15px;
-        }
+/* MENÚ */
+.menu{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.7);
+  padding:15px;
+}
 
-        .menu a{
-            color:white;
-            margin:0 20px;
-            text-decoration:none;
-            font-weight:bold;
-        }
+.menu a{
+  color:white;
+  margin:0 20px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-        .formulario{
-            margin-top:120px;
-        }
+/* FORMULARIO */
+.formulario{
+  margin-top:120px;
+}
 
-        input, textarea{
-            width:300px;
-            padding:10px;
-            margin:10px;
-            border:none;
-            border-radius:10px;
-        }
+input, textarea{
+  width:300px;
+  padding:10px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+}
 
-        button{
-            background:#ff6b6b;
-            color:white;
-            padding:10px 20px;
-            border:none;
-            border-radius:10px;
-            cursor:pointer;
-        }
-    </style>
+button{
+  background:#ff6b6b;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+}
+</style>
+
 </head>
 
 <body>
 
+<!-- MENÚ -->
 <div class="menu">
-    <a href="index.html">Inicio</a>
-    <a href="galeria.html">Galería</a>
-    <a href="contacto.html">Contacto</a>
+  <a href="index.html">Inicio</a>
+  <a href="galeria.html">Galería</a>
+  <a href="contacto.html">Contacto</a>
 </div>
 
 <div class="formulario">
-    <h1>Contáctame</h1>
+  <h1>Contáctame</h1>
 
-    <form action="https://formsubmit.co/rosalyhirujo01@gmail.com" method="POST">
+  <form action="https://formsubmit.co/rosalyhirujo01@gmail.com" method="POST">
 
-        <input type="hidden" name="_next" value="https://rosaly-hirujo.github.io/mi-pagina/index.html">
+    <!-- REDIRECCIÓN -->
+    <input type="hidden" name="_next" value="https://rosaly-hirujo.github.io/mi-pagina/index.html">
 
-        <input type="text" name="nombre" placeholder="Tu nombre" required><br>
+    <input type="text" name="nombre" placeholder="Tu nombre" required><br>
 
-        <input type="email" name="email" placeholder="Tu correo" required><br>
+    <input type="email" name="email" placeholder="Tu correo" required><br>
 
-        <textarea name="mensaje" placeholder="Tu mensaje"></textarea><br>
+    <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje"></textarea><br>
 
-        <button type="submit">Enviar</button>
+    <button type="submit">Enviar</button>
 
-    </form>
+  </form>
 </div>
 
+<!-- SCRIPT AUTOMÁTICO -->
 <script>
 const params = new URLSearchParams(window.location.search);
 const obra = params.get("obra");
 
 if(obra){
-    document.querySelector("textarea").value = "Me interesa " + obra;
+  document.getElementById("mensaje").value = "Me interesa la obra " + obra;
 }
 </script>
 
