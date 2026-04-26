@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Galería</title>
 
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(135deg,#1f4037,#99f2c8);
+  color:white;
+  text-align:center;
+}
+
+/* MENU */
+.menu{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  padding:15px;
+}
+
+.menu a{
+  color:white;
+  margin:0 20px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* GALERIA */
+.galeria{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:120px 20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:15px;
+  border-radius:15px;
+  width:250px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+img{
+  width:100%;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="menu">
+<a href="index.html">Inicio</a>
+<a href="galeria.html">Galería</a>
+<a href="contacto.html">Contacto</a>
+</div>
+
+<h1 style="margin-top:100px;">🎨 Galería de Pinturas</h1>
+
+<div class="galeria">
+
+<!-- OBRA 1 -->
+<div class="card">
+<img src="cuadro1.jpeg">
+<h3>Obra 1</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 2 -->
+<div class="card">
+<img src="cuadro2.jpeg">
+<h3>Obra 2</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 3 -->
+<div class="card">
+<img src="cuadro3.jpg">
+<h3>Obra 3</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 4 -->
+<div class="card">
+<img src="cuadro4.jpg">
+<h3>Obra 4</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 5 -->
+<div class="card">
+<img src="cuadro5.jpg">
+<h3>Obra 5</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 6 -->
+<div class="card">
+<img src="cuadro6.jpg">
+<h3>Obra 6</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 7 -->
+<div class="card">
+<img src="cuadro7.jpg">
+<h3>Obra 7</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 8 -->
+<div class="card">
+<img src="cuadro8.jpg">
+<h3>Obra 8</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 9 -->
+<div class="card">
+<img src="cuadro9.jpg">
+<h3>Obra 9</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 10 -->
+<div class="card">
+<img src="cuadro10.jpg">
+<h3>Obra 10</h3>
+<p>Pintura al óleo</p>
+</div>
+
+<!-- OBRA 11 -->
+<div class="card">
+<img src="cuadro11.jpg">
+<h3>Obra 11</h3>
+<p>Pintura al óleo</p>
+</div>
+
+</div>
+
+</body>
+</html>
