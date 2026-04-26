@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Contacto</title>
+<title>Inicio</title>
 
 <style>
 body{
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family:Arial;
   background:linear-gradient(135deg,#1f4037,#99f2c8);
   color:white;
   text-align:center;
 }
 
-/* MENU */
 .menu{
   position:fixed;
   width:100%;
   top:0;
   background:rgba(0,0,0,0.6);
   padding:15px;
-  z-index:1000;
 }
 
 .menu a{
@@ -29,92 +27,37 @@ body{
   font-weight:bold;
 }
 
-/* CONTENIDO */
-.container{
-  margin-top:120px;
-}
-
-/* FORM */
-form{
-  background:rgba(255,255,255,0.1);
-  padding:25px;
-  border-radius:15px;
-  width:320px;
-  margin:auto;
-  backdrop-filter: blur(10px);
-}
-
-input, textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:none;
-  border-radius:8px;
-  outline:none;
-}
-
-textarea{
-  resize:none;
-  height:100px;
+.hero{
+  margin-top:150px;
 }
 
 button{
   background:#ff6b6b;
   color:white;
-  padding:12px;
+  padding:15px 25px;
   border:none;
   border-radius:10px;
   cursor:pointer;
-  width:100%;
-  font-size:16px;
-  transition:0.3s;
-}
-
-button:hover{
-  background:#ff4b4b;
-  transform:scale(1.05);
-}
-
-h2{
-  margin-bottom:20px;
+  margin-top:20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
 <div class="menu">
 <a href="index.html">Inicio</a>
 <a href="galeria.html">Galería</a>
 <a href="contacto.html">Contacto</a>
 </div>
 
-<!-- CONTENIDO -->
-<div class="container">
-<h2>Contáctame</h2>
+<div class="hero">
+<h1>🎨 Galería de Pinturas</h1>
+<p>Artista: Valentín</p>
 
-<form action="https://formsubmit.co/TUEMAIL@gmail.com" method="POST">
-
-<input type="text" name="nombre" placeholder="Tu nombre" required>
-
-<input type="email" name="email" placeholder="Tu correo" required>
-
-<textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
-
-<!-- CONFIGURACIÓN -->
-<input type="hidden" name="_next" value="https://rosaly-hirujo.github.io/mi-pagina/">
-<input type="hidden" name="_captcha" value="false">
-
-<button type="submit">Enviar mensaje</button>
-
-</form>
-
-<p style="margin-top:20px;">
-📩 También puedes escribir directamente a:<br>
-<b>rosalyhirujo01@gmail.com</b>
-</p>
-
+<a href="galeria.html">
+<button>Ver obras</button>
+</a>
 </div>
 
 </body>
