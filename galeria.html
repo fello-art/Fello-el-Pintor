@@ -1,173 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Galería</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fello Art Gallery</title>
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:linear-gradient(135deg,#1f4037,#99f2c8);
-  color:white;
-  text-align:center;
-}
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f4f1ea;
+      color:#222;
+    }
 
-.menu{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(0,0,0,0.7);
-  padding:15px;
-}
+    header{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
 
-.menu a{
-  color:white;
-  margin:0 20px;
-  text-decoration:none;
-  font-weight:bold;
-}
+    header h1{
+      margin:0;
+      font-size:42px;
+      letter-spacing:2px;
+    }
 
-h1{
-  margin-top:100px;
-}
+    header p{
+      margin-top:10px;
+      font-size:18px;
+      color:#ccc;
+    }
 
-.galeria{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  padding:20px;
-}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:40px;
+    }
 
-.card{
-  background:rgba(255,255,255,0.1);
-  padding:15px;
-  border-radius:15px;
-  width:220px;
-}
+    .art-card{
+      background:white;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
 
-.card img{
-  width:100%;
-  border-radius:10px;
-}
+    .art-card:hover{
+      transform:scale(1.03);
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  background:#ff6b6b;
-  color:white;
-  padding:10px 15px;
-  border-radius:10px;
-  text-decoration:none;
-}
-</style>
+    .art-card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
 
+    .art-info{
+      padding:20px;
+    }
+
+    .art-info h2{
+      margin-top:0;
+    }
+
+    .art-info p{
+      color:#555;
+      line-height:1.5;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:12px 20px;
+      background:#111;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#444;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="menu">
-  <a href="index.html">Inicio</a>
-  <a href="galeria.html">Galería</a>
-  <a href="contacto.html">Contacto</a>
-</div>
+<header>
+  <h1>Fello Art Gallery</h1>
+  <p>Original Oil Paintings Available for Purchase</p>
+</header>
 
-<h1>🎨 Galería de Obras</h1>
+<section class="gallery">
 
-<p>Todas las obras están elaboradas en óleo sobre lienzo.  
-También realizamos pinturas por encargo.</p>
+  <div class="art-card">
+    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200&auto=format&fit=crop" alt="Painting 1">
 
-<div class="galeria">
+    <div class="art-info">
+      <h2>Painting 1</h2>
+      <p>
+        Handmade oil painting with vibrant colors and artistic texture.
+      </p>
 
-<!-- OBRA 1 -->
-<div class="card">
-  <img src="./cuadro1.jpeg">
-  <p><strong>Obra 1</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=1" class="btn">Me interesa</a>
-</div>
+      <a class="btn"
+      href="https://wa.me/18090000000?text=I'm%20interested%20in%20Painting%201"
+      target="_blank">
+      I'm Interested
+      </a>
+    </div>
+  </div>
 
-<!-- OBRA 2 -->
-<div class="card">
-  <img src="./cuadro2.jpeg">
-  <p><strong>Obra 2</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=2" class="btn">Me interesa</a>
-</div>
+  <div class="art-card">
+    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1200&auto=format&fit=crop" alt="Painting 2">
 
-<!-- OBRA 3 -->
-<div class="card">
-  <img src="./cuadro3.jpeg">
-  <p><strong>Obra 3</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=3" class="btn">Me interesa</a>
-</div>
+    <div class="art-info">
+      <h2>Painting 2</h2>
+      <p>
+        Elegant oil artwork inspired by modern artistic expression.
+      </p>
 
-<!-- OBRA 4 -->
-<div class="card">
-  <img src="./cuadro4.jpeg">
-  <p><strong>Obra 4</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=4" class="btn">Me interesa</a>
-</div>
+      <a class="btn"
+      href="https://wa.me/18090000000?text=I'm%20interested%20in%20Painting%202"
+      target="_blank">
+      I'm Interested
+      </a>
+    </div>
+  </div>
 
-<!-- OBRA 5 -->
-<div class="card">
-  <img src="./cuadro5.jpeg">
-  <p><strong>Obra 5</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=5" class="btn">Me interesa</a>
-</div>
+  <div class="art-card">
+    <img src="https://images.unsplash.com/photo-1578301979108-0d66f0d7d6b3?q=80&w=1200&auto=format&fit=crop" alt="Painting 3">
 
-<!-- OBRA 6 -->
-<div class="card">
-  <img src="./cuadro6.jpeg">
-  <p><strong>Obra 6</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=6" class="btn">Me interesa</a>
-</div>
+    <div class="art-info">
+      <h2>Painting 3</h2>
+      <p>
+        Unique artistic composition created with oil on canvas.
+      </p>
 
-<!-- OBRA 7 -->
-<div class="card">
-  <img src="./cuadro7.jpeg">
-  <p><strong>Obra 7</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=7" class="btn">Me interesa</a>
-</div>
+      <a class="btn"
+      href="https://wa.me/18090000000?text=I'm%20interested%20in%20Painting%203"
+      target="_blank">
+      I'm Interested
+      </a>
+    </div>
+  </div>
 
-<!-- OBRA 8 -->
-<div class="card">
-  <img src="./cuadro8.jpeg">
-  <p><strong>Obra 8</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=8" class="btn">Me interesa</a>
-</div>
+</section>
 
-<!-- OBRA 9 -->
-<div class="card">
-  <img src="./cuadro9.jpeg">
-  <p><strong>Obra 9</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=9" class="btn">Me interesa</a>
-</div>
-
-<!-- OBRA 10 -->
-<div class="card">
-  <img src="./cuadro10.jpeg">
-  <p><strong>Obra 10</strong></p>
-  <p>Pintura al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=10" class="btn">Me interesa</a>
-</div>
-
-<!-- OBRA 11 -->
-<div class="card">
-  <img src="./cuadro11.jpeg">
-  <p><strong>Obra 11</strong></p>
-  <p>Cuadros gemelos al óleo sobre lienzo</p>
-  <a href="contacto.html?obra=11" class="btn">Me interesa</a>
-</div>
-
-</div>
+<footer>
+  <p>© 2026 Fello Art Gallery | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
